@@ -1,0 +1,20 @@
+
+body {
+    background-color: #bfd1e5;
+    color: #61443e;
+    margin: 0;
+    overflow: hidden; /* Evita scrolls innecesarios en juegos */
+}
+
+a {
+    color: #a06851;
+}
+
+#info {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+    display: block;
+}
