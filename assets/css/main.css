@@ -1,91 +1,77 @@
-body {
-	margin: 0;
-	background-color: #000;
-	color: #fff;
-	font-family: Monospace;
-	font-size: 13px;
-	line-height: 24px;
-	overscroll-behavior: none;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            display: flex; 
+            flex-direction: column; 
+            height: 100vh; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a;
+        }
 
-a {
-	color: #ff0;
-	text-decoration: none;
-}
+        /* HEADER */
+        header {
+            background: #002d55; /* Azul institucional */
+            color: white;
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #f9b233; /* Detalle dorado */
+        }
 
-a:hover {
-	text-decoration: underline;
-}
+        header h1 { font-size: 1.2rem; font-weight: 300; }
+        header .titulo-central { font-size: 1.5rem; font-weight: bold; text-transform: uppercase; }
 
-button {
-	cursor: pointer;
-	text-transform: uppercase;
-}
+        /* CONTENIDO PRINCIPAL */
+        #main-container {
+            display: flex;
+            flex: 1; /* Ocupa el espacio restante entre header y footer */
+            overflow: hidden;
+        }
 
-#info {
-	position: absolute;
-	top: 0px;
-	width: 100%;
-	padding: 10px;
-	box-sizing: border-box;
-	text-align: center;
-	-moz-user-select: none;
-	-webkit-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	pointer-events: none;
-	z-index: 1; /* TODO Solve this in HTML */
-}
+        /* MENÚ LATERAL */
+        #sidebar { 
+            width: 260px; 
+            background: #252525; 
+            padding: 20px; 
+            display: flex; 
+            flex-direction: column; 
+            gap: 12px;
+            border-right: 1px solid #444;
+        }
 
-a, button, input, select {
-	pointer-events: auto;
-}
+        #sidebar h3 { color: #888; font-size: 0.8rem; margin-bottom: 10px; text-transform: uppercase; }
 
-.lil-gui {
-	z-index: 2 !important; /* TODO Solve this in HTML */
-}
+        button { 
+            padding: 12px; 
+            background: #333; 
+            border: 1px solid #444; 
+            color: #ddd; 
+            cursor: pointer; 
+            text-align: left; 
+            border-radius: 6px; 
+            transition: all 0.2s;
+        }
 
-@media all and ( max-width: 640px ) {
-	.lil-gui.root { 
-		right: auto;
-		top: auto;
-		max-height: 50%;
-		max-width: 80%;
-		bottom: 0;
-		left: 0;
-	}
-}
+        button:hover { background: #444; color: white; border-color: #007bff; }
+        button.active { background: #007bff; color: white; border-color: #0056b3; font-weight: bold; }
 
-#overlay {
-	position: absolute;
-	font-size: 16px;
-	z-index: 2;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	background: rgba(0,0,0,0.7);
-}
+        /* EL VISUALIZADOR */
+        #viewer { 
+            flex: 1; 
+            border: none; 
+            background: #000; 
+        }
 
-	#overlay button {
-		background: transparent;
-		border: 0;
-		border: 1px solid rgb(255, 255, 255);
-		border-radius: 4px;
-		color: #ffffff;
-		padding: 12px 18px;
-		text-transform: uppercase;
-		cursor: pointer;
-	}
+        /* FOOTER */
+        footer {
+            background: #222;
+            color: #aaa;
+            padding: 10px 25px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            border-top: 1px solid #444;
+        }
 
-#notSupported {
-	width: 50%;
-	margin: auto;
-	background-color: #f00;
-	margin-top: 20px;
-	padding: 10px;
-}
+        footer strong { color: #eee; }

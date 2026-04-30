@@ -1,0 +1,37 @@
+body {
+    background-color: #bfd1e5;
+    color: #61443e;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Evita barras de desplazamiento al mover la cámara */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#info {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+    pointer-events: none; /* Permite que los clicks pasen al canvas de Three.js */
+    line-height: 1.5;
+}
+
+#info a {
+    color: #a06851;
+    text-decoration: none;
+    font-weight: bold;
+    pointer-events: auto; /* Hace que los links sí sean clickeables */
+}
+
+#info a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para las estadísticas de rendimiento (Stats.js) */
+#stats {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
